@@ -1,0 +1,29 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "restaurant page for the webpack tutorial",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumancrest0001/restaurant-page.git"
+  },
+  "author": "suman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumancrest0001/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/sumancrest0001/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.15"
+  }
+}
