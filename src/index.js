@@ -1,28 +1,28 @@
-import addMenu from "./views/menuViews";
-import addContact from "./views/contactViews";
-import { addNavbar, addLanding } from "./views/homeViews";
+import addMenu from './views/menuViews';
+import addContact from './views/contactViews';
+import { addNavbar, addLanding } from './views/homeViews';
 
-const mainDiv = document.querySelector("#content");
-
-window.onload = loadHomePage();
+const mainDiv = document.querySelector('#content');
 
 function loadHomePage() {
-  mainDiv.insertAdjacentHTML("beforebegin", addNavbar());
-  mainDiv.insertAdjacentHTML("beforeend", addLanding());
+  mainDiv.insertAdjacentHTML('beforebegin', addNavbar());
+  mainDiv.insertAdjacentHTML('beforeend', addLanding());
 }
+window.onload = loadHomePage();
+
 function clearHTML() {
-  mainDiv.innerHTML = "";
+  mainDiv.innerHTML = '';
 }
-const navbar = document.querySelector(".navbar");
+const navbar = document.querySelector('.navbar');
 
 function addActiveClass(text) {
-  const items = document.getElementsByClassName("nav-item");
-  let itemArr = Array.prototype.slice.call(items);
+  const items = document.getElementsByClassName('nav-item');
+  const itemArr = Array.prototype.slice.call(items);
   itemArr.forEach(item => {
     if (item.textContent === text) {
-      item.classList.add("active");
+      item.classList.add('active');
     } else {
-      item.classList.remove("active");
+      item.classList.remove('active');
     }
   });
 }
@@ -32,24 +32,23 @@ function switchTabs(e) {
 
   clearHTML();
   switch (selectedTab) {
-    case "Home":
-      mainDiv.insertAdjacentHTML("beforeend", addLanding());
+    case 'Home':
+      mainDiv.insertAdjacentHTML('beforeend', addLanding());
       addActiveClass(selectedTab);
       break;
-    case "Menu":
-      mainDiv.insertAdjacentHTML("beforeend", addMenu());
+    case 'Menu':
+      mainDiv.insertAdjacentHTML('beforeend', addMenu());
       addActiveClass(selectedTab);
       break;
-    case "Contact Us":
-      mainDiv.insertAdjacentHTML("beforeend", addContact());
+    case 'Contact Us':
+      mainDiv.insertAdjacentHTML('beforeend', addContact());
       addActiveClass(selectedTab);
       break;
     default:
-      mainDiv.insertAdjacentHTML("beforeend", addLanding());
+      mainDiv.insertAdjacentHTML('beforeend', addLanding());
       addActiveClass(selectedTab);
       break;
   }
 }
 
-navbar.addEventListener("click", switchTabs);
-console.log(typeof items);
+navbar.addEventListener('click', switchTabs);
