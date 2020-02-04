@@ -1,11 +1,10 @@
-# Tic Tac Toe Project
+# Restaurant-page
 
 > This project is a simple restaurant page. Use and understanding of webpack was the main motto of the project.
 
 ![screenshot](img/screenshot.png)
 
 This project has this characteristics:
-  - Create objects using factory functions.
   - Webpack and npm packages implementation
 
 ## Built With

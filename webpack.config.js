@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -12,13 +11,6 @@ module.exports = {
   },
   stats: { children: false },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      inject: false,
-      template: './src/index.html',
-    }),
-  ],
   module: {
     rules: [
       {
